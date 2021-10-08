@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог Седона</title>
-  <link rel="stylesheet" href="css/catalog-styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!-- HEADER START -->
   <header class="main-header">
     <nav class="navigation">
-      <ul class="navigation-list">
+      <ul class="navigation-list rs-list">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
@@ -19,14 +19,14 @@
           <a class="navigation-link" href="#">О Седоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-current">Гостиницы</a>
+          <a class="navigation-link navigation-current" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
-      <a class="logo" href="index.html">
+      <a class="logo">
         <span class="visually-hidden">Логотип города Седона</span>
         <img src="img/logos/logo-sedona.svg" width="138px" height="70px" class="logo" alt="Логотип города Седона">
       </a>
-      <ul class="navigation-list navigation-user">
+      <ul class="navigation-list navigation-user rs-list">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden">Поиск</span>
@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a href="#" class="button">Хочу сюда!</a>
+          <a href="#" class="button button-brown">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -49,8 +49,8 @@
   <!-- MAIN START -->
   <main class="main-inner">
     <header class="inner-header">
-      <h1 class="inner-header-title">Гостиницы Седоны</h1>
-      <ul class="breadcrumbs">
+      <h1 class="inner-header-title title-1">Гостиницы Седоны</h1>
+      <ul class="breadcrumbs rs-list">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
             <img class="breadcrumbs-icon" src="img/icons/home.svg" width="12px" height="12px" alt="Иконка дома">
@@ -64,7 +64,7 @@
       <form class="filter" action="https://echo.htmlacademy.ru/">
         <fieldset class="filter-group">
           <legend class="filter-title">Инфраструктура:</legend>
-          <ul class="filter-list">
+          <ul class="filter-list rs-list">
             <li class="filter-item">
               <label class="control">
                 <span class="control-mark">Бассейн</span>
@@ -87,7 +87,7 @@
         </fieldset>
         <fieldset class="filter-group">
           <legend class="filter-title">Тип жилья:</legend>
-          <ul class="filter-list">
+          <ul class="filter-list rs-list">
             <li class="filter-item">
               <label class="control">
                 <span class="control-mark">Гостиница</span>
@@ -131,7 +131,7 @@
       <h2 class="visually-hidden">Каталог</h2>
       <!-- Сортировка -->
       <div class="catalog-sort">
-        <p class="catalog-sort-title">Найдено гостиниц:<span class="hotel-numbers">38</span></p>
+        <p class="catalog-sort-title title-3">Найдено гостиниц:<span class="hotel-numbers">38</span></p>
         <form action="https://echo.htmlacademy.ru/" class="catalog-grade method="POST">
           <label for="gradeselect">Сортировка цен каталога</label>
           <select name="grade" id="gradeselect" class="catalog-grade-select">
@@ -140,7 +140,7 @@
           </select>
           <button type="submit" class="visually-hidden">Отсортировать продукты</button>
         </form>
-        <ul class="sort-type">
+        <ul class="sort-type rs-list">
           <li class="sort-type-item">
             <a class="sort-type-link" href="#">
               <span class="visually-hidden">Плитки</span>
@@ -163,7 +163,7 @@
       </div>
       <!-- Список отелей/результаты фильтров -->
       <div class="catalog-result">
-        <ul class="result-list">
+        <ul class="result-list rs-list">
           <li class="card">
             <div class="card-column">
               <a href="#" class="card-link">
@@ -172,13 +172,13 @@
               </a>
               <div class="card-content">
                 <h3 class="card-name">
-                  <a href="#">Amara Resort & Spa</a>
+                  <a class="card-name-link title-4"" href="#">Amara Resort & Spa</a>
                 </h3>
                 <p class="card-category">
                   <span class="card-type">Гостиница</span>
                   <span class="card-price">От 4000 ₽</span>
                 </p>
-                <ul class="card-buttons">
+                <ul class="card-buttons rs-list">
                   <li class="card-buttons-item">
                     <a type="button" class="button" href="#">Подробнее</a>
                   </li>
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="card-column">
-              <ul class="raiting">
+              <ul class="raiting rs-list">
                 <li class="raiting-item">
                   <img class="raiting-icon" src="img/icons/star.svg" width="18px" height="17px" alt="Звезда">
                 </li>
@@ -214,13 +214,13 @@
               </a>
               <div class="card-content">
                 <h3 class="card-name">
-                  <a href="#">Desert Quail Inn</a>
+                  <a class="card-name-link title-4" href="#">Desert Quail Inn</a>
                 </h3>
                 <p class="card-category">
                   <span class="card-type">Мотель</span>
                   <span class="card-price">От 3000р</span>
                 </p>
-                <ul class="card-buttons">
+                <ul class="card-buttons rs-list">
                   <li class="card-buttons-item">
                     <a type="button" class="button" href="#">Подробнее</a>
                   </li>
@@ -231,7 +231,7 @@
               </div>
             </div>
             <div class="card-column">
-              <ul class="raiting">
+              <ul class="raiting rs-list">
                 <li class="raiting-item">
                   <img class="raiting-icon" src="img/icons/star.svg" width="18px" height="17px" alt="Звезда">
                 </li>
@@ -253,13 +253,13 @@
               </a>
               <div class="card-content">
                 <h3 class="card-name">
-                  <a href="#">Villas at Poco Diablo</a>
+                  <a class="card-name-link title-4" href="#">Villas at Poco Diablo</a>
                 </h3>
                 <p class="card-category">
                   <span class="card-type">Апартаменты</span>
                   <span class="card-price">От 2000 ₽</span>
                 </p>
-                <ul class="card-buttons">
+                <ul class="card-buttons rs-list">
                   <li class="card-buttons-item">
                     <a type="button" class="button" href="#">Подробнее</a>
                   </li>
@@ -270,7 +270,7 @@
               </div>
             </div>
             <div class="card-column">
-              <ul class="raiting">
+              <ul class="raiting rs-list">
                 <li class="raiting-item">
                   <img class="raiting-icon" src="img/icons/star.svg" width="18px" height="17px" alt="Звезда">
                 </li>
@@ -289,13 +289,13 @@
               </a>
               <div class="card-content">
                 <h3 class="card-name">
-                  <a href="#">GreenTree Inn</a>
+                  <a class="card-name-link title-4"" href="#">GreenTree Inn</a>
                 </h3>
                 <p class="card-category">
                   <span class="card-type">Гостиница</span>
                   <span class="card-price">От 3000р</span>
                 </p>
-                <ul class="card-buttons">
+                <ul class="card-buttons rs-list">
                   <li class="card-buttons-item">
                     <a type="button" class="button" href="#">Подробнее</a>
                   </li>
@@ -306,7 +306,7 @@
               </div>
             </div>
             <div class="card-column">
-              <ul class="raiting">
+              <ul class="raiting rs-list">
                 <li class="raiting-item">
                   <img class="raiting-icon" src="img/icons/star.svg" width="18px" height="17px" alt="Звезда">
                 </li>
@@ -324,7 +324,7 @@
       </div>
       <!-- Пагинация -->
       <div class="catalog-footer">
-        <ul class="pagination">
+        <ul class="pagination rs-list">
           <li class="pagination-item pagination-item-current">
             <a class="pagination-link pagination-link-current" href="#">1</a>
           </li>
@@ -359,7 +359,7 @@
   <!-- FOOTER-START -->
   <footer class="page-footer">
     <section class="subscribe-catalog">
-      <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+      <h2 class="subscribe-catalog-title title-3">Подпишитесь на рассылку</h2>
       <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" class="subscribe-form" method="POST">
         <label>
@@ -370,34 +370,36 @@
       </form>
     </section>
     <section class="catalog-contacts">
-      <h2 class="visually-hiden">Как связаться с нами</h2>
-      <ul class="social">
-        <li class="social-item">
-          <a href="https://twitter.com/htmlacademy_ru">
-            <span class="visually-hidden">Твиттер</span>
-            <img src="img/icons/social-twitter.png" width="18px" height="15px" alt="Иконка Твиттер">
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://www.facebook.com/htmlacademy">
-            <span class="visually-hidden">Фейсбук</span>
-            <img src="img/icons/social-facebook.png" width="10px" height="18px" alt="Иконка Фейсбук">
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Ютуб</span>
-            <img src="img/icons/social-youtube.png" width="20px" height="16px" alt="Иконка Ютуб">
-          </a>
-        </li>
-      </ul>
-      <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="htmlacademy-logo" href="https://.htmlacademy.ru/">
-        <span class="visually-hidden">HTML Академия</span>
-        <img src="img/logos/logo-htmlacademy.svg" width="115px" height="33px" alt="Логотип HTML Academy">
-      </a>
-    </section>
-  </footer>
-  <!-- FOOTER-END -->
+      <h2 class="visually-hidden">Как связаться с нами</h2>
+      <section class="catalog-contacts">
+        <h2 class="visually-hidden">Как связаться с нами</h2>
+        <ul class="social rs-list">
+          <li class="social-item">
+            <a href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Твиттер</span>
+              <img src="img/icons/social-twitter.png" width="18px" height="15px" alt="Иконка Твиттер">
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фейсбук</span>
+              <img src="img/icons/social-facebook.png" width="10px" height="18px" alt="Иконка Фейсбук">
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ютуб</span>
+              <img src="img/icons/social-youtube.png" width="20px" height="16px" alt="Иконка Ютуб">
+            </a>
+          </li>
+        </ul>
+        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="htmlacademy-logo" href="https://.htmlacademy.ru/">
+          <span class="visually-hidden">HTML Академия</span>
+          <img src="img/logos/logo-htmlacademy.svg" width="115px" height="33px" alt="Логотип HTML Academy">
+        </a>
+      </section>
+    </footer>
+    <!-- FOOTER-END -->
 </body>
 </html>

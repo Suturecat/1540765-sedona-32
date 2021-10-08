@@ -1,0 +1,417 @@
+/* ==================================
+   Section - Fonts
+   ================================= */
+   @font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2"); /* не забудь оборачивать в кавычки */
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2");
+    font-display: swap;
+  }
+
+  /* ==================================
+     Section - Variables
+     Блок будет содержать переменные:
+     - цвета
+     - повторяющиеся размеры и т.д.
+     ================================= */
+  :root {
+    --b-black: #000000;
+    --b-dark: #333333;
+    --b-grey: #e5e5e5;
+    --b-grey-light: #f2f2f2;
+    --b-white: #fff;
+    --brown-light: #756257;
+    --brown-dark: #615048;
+    --green-light: #7db54f;
+    --green-dark: #6c9e42;
+    --blue-light: #83b3d3;
+    --blue-lighten-1: rgba(131, 179, 211, 0.2);
+    --blue-lighten-2: rgba(131, 179, 211, 0.12);
+    --blue-dark: #68a2ca;
+    --error: #ff5757;
+    --warning: #fd922e;
+    --succes: #7db550;
+
+    --base-fz: 18px;
+    --base-lh: 21px;
+    --base-fw: 400;
+    --base-ff: "PT Sans", Arial, Helvetica, sans-serif;
+    --anim: all 0.2s ease;
+  }
+
+  /* ==================================
+     Section - Global Styles
+     ================================= */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--base-ff);
+  font-size: var(--base-fz);
+  line-height: var(--base-lh);
+  font-weight: var(--base-fw);
+  background-color: var(--b-white);
+  color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+/* ==================================
+   Section - Utility classes
+   ================================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.rs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rs-indent {
+  padding: 0;
+  margin: 0;
+}
+
+/* ==================================
+   Section - Buttons
+   ================================= */
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: var(--base-lh);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--b-white);
+  transition: var(--anim);
+  border: 3px solid transparent;
+  outline: none;
+}
+
+.button-blue {
+  background-color: var(--blue-light);
+}
+
+.button-blue:hover {
+  background-color: var(--blue-dark);
+}
+
+.button-blue:focus {
+  border-color: var(--brown-light);
+}
+
+.button-blue:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-brown {
+  background-color: var(--brown-light);
+}
+
+.button-green {
+  background-color: var(--green-light);
+}
+
+.button-brow:hover {
+}
+.button-brow:focus {
+}
+.button-brow:active {
+}
+
+.button-green:hover {
+}
+.button-green:focus {
+}
+.button-green:active {
+}
+/* ==================================
+   Section - Typography
+   ================================= */
+.title-1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: var(--b-black);
+}
+.title-2 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--b-black);
+}
+.title-3 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--b-black);
+}
+.title-4 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--b-black);
+}
+
+/* ==================================
+   Section - Header
+   ================================= */
+
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration: none;
+  color: var(--b-black);
+  font-weight: 700;
+}
+
+/* ==================================
+   Section - Intro
+   ================================= */
+
+.intro {
+  background-image: url("../img/backgrounds/index-background.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ==================================
+   Section - Advantages
+   ================================= */
+
+.advantages,
+.advantages-row {
+  text-align: center;
+}
+
+.advantages-heading {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--b-black);
+}
+
+.advantages-description {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+.advantages-item-coldblue {
+  background-color: var(--blue-light);
+  color: var(--b-white);
+}
+
+.advantages-item-title {
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--b-white);
+}
+
+.advantages-item-lightblue {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-heading {
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-item-lighterblue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* ==================================
+   Section - Booking
+   ================================= */
+
+.booking {
+  text-align: center;
+}
+
+.booking-title {
+  line-height: 36px;
+}
+
+.booking-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.booking-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* ==================================
+   Section - Subscribe
+   ================================= */
+
+.subscribe {
+  background-image: url("../img/backgrounds/background-subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  color: var(--b-white);
+}
+
+.subscribe-title {
+  line-height: 36px;
+  color: var(--b-white);
+}
+
+.subscribe-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscribe-button {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* ==================================
+   Section - Footer
+   ================================= */
+
+.catalog-contacts {
+  text-align: center;
+}
+
+.footer-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--b-black);
+  text-decoration: none;
+}
+
+/* ==================================
+   Section - Inner Header
+   ================================= */
+
+.inner-header {
+  background-color: var(--b-dark);
+  background-image: url("../img/backgrounds/catalog-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: var(--b-white);
+}
+
+.inner-header-title {
+  color: var(--b-white);
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+}
+
+/* ==================================
+   Section - Filters
+   ================================= */
+
+.filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+/* ==================================
+   Section - Sorting
+   ================================= */
+
+.catalog-sort-title {
+  line-height: 39px;
+}
+
+.catalog-grade-select {
+  font-size: var(--base-fz);
+  line-height: 24px;
+  font-weight: var(--base-fw);
+  color: var(--dark);
+}
+
+/* ==================================
+   Section - Product-List
+   ================================= */
+
+.card-name-link {
+  line-height: 31px;
+  text-decoration: none;
+}
+
+.raiting-value {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--b-grey-light);
+}
+
+.catalog-button-more {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* ==================================
+   Section - Pagination
+   ================================= */
+
+.pagination-link {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--b-white);
+  background-color: var(--blue-light);
+}
+
+.pagination-link-current {
+  background-color: var(--b-grey);
+  color: var(--b-dark);
+}
+
+/* ==================================
+   Section - Subscribe-Catalog
+   ================================= */
+
+.subscribe-catalog {
+  text-align: center;
+}
+
+.subscribe-catalog-title {
+  line-height: 36px;
+  color: var(--b-black);
+}
