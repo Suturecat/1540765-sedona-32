@@ -5,7 +5,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/ptsans-400.woff2"); /* не забудь оборачивать в кавычки */
+    src: url("../fonts/ptsans-400.woff2");
     font-display: swap;
   }
 
@@ -52,15 +52,36 @@
      Section - Global Styles
      ================================= */
 
+html {
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: var(--base-ff);
   font-size: var(--base-fz);
   line-height: var(--base-lh);
   font-weight: var(--base-fw);
   background-color: var(--b-white);
   color: var(--dark);
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  width: 1056px;
+  margin: 0 auto;
 }
 
 img {
@@ -186,6 +207,9 @@ a {
    Section - Header
    ================================= */
 
+.navigation {
+  display: flex;
+}
 
 .navigation-link {
   font-size: 20px;
@@ -195,20 +219,47 @@ a {
   font-weight: 700;
 }
 
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+}
+
+.menu {
+  margin-right: 140px;
+}
+
+.navigation-user {
+  width: 260px;
+  margin-left: auto;
+}
+
 /* ==================================
    Section - Intro
    ================================= */
 
+
+
 .intro {
   background-image: url("../img/backgrounds/index-background.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.intro-image {
+  display: block;
+  margin: 0 auto;
 }
 
 /* ==================================
    Section - Advantages
    ================================= */
+
+.advantages-text {
+  width: 720px;
+  margin: 0 auto;
+}
 
 .advantages,
 .advantages-row {
@@ -228,9 +279,22 @@ a {
   line-height: 36px;
 }
 
+.advantages-row {
+  display: flex;
+}
+
+.advantages-img {
+  width: calc(100% / 1);
+  flex-grow: 2;
+}
+
 .advantages-item-coldblue {
+  width: calc(100% / 1);
+  flex-grow: 1;
   background-color: var(--blue-light);
   color: var(--b-white);
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .advantages-item-title {
@@ -241,6 +305,13 @@ a {
 
 .advantages-item-lightblue {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list-item {
+  width: calc(100% / 3);
+  flex-grow: 1;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .advantages-item-heading {
@@ -257,6 +328,8 @@ a {
    ================================= */
 
 .booking {
+  width: 720px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -287,6 +360,11 @@ a {
   color: var(--b-white);
 }
 
+.subscribe-desc {
+  width: 700px;
+  margin: 0 auto;
+}
+
 .subscribe-title {
   line-height: 36px;
   color: var(--b-white);
@@ -302,12 +380,24 @@ a {
   line-height: 26px;
 }
 
+.subscribe-form {
+  width: 800px;
+  margin: 0 auto;
+}
+
 /* ==================================
    Section - Footer
    ================================= */
 
+
 .catalog-contacts {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  width: 110px;
 }
 
 .footer-phone {
@@ -348,12 +438,44 @@ a {
   font-weight: 700;
 }
 
+.filter {
+  display: flex;
+}
+
+.filter-group {
+  width: 150px;
+}
+
+.infrastructure {
+  margin-right: 70px;
+}
+
+.product-type {
+  margin-right: 170px;
+}
+
+.filters {
+  display: flex;
+}
+
+.filters-button {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
 /* ==================================
    Section - Sorting
    ================================= */
 
+
+.catalog-sort {
+  display: flex;
+}
+
 .catalog-sort-title {
   line-height: 39px;
+  margin-right: 195px;
 }
 
 .catalog-grade-select {
@@ -363,9 +485,22 @@ a {
   color: var(--dark);
 }
 
+.sort-type {
+  margin-left: auto;
+}
+
 /* ==================================
    Section - Product-List
    ================================= */
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-column {
+  display: flex;
+}
 
 .card-name-link {
   line-height: 31px;
@@ -384,9 +519,27 @@ a {
   line-height: 26px;
 }
 
+.catalog-more {
+  text-align: center;
+}
+
 /* ==================================
    Section - Pagination
    ================================= */
+
+.catalog-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination-item {
+  width: 55px;
+  margin-right: 7px;
+}
 
 .pagination-link {
   font-size: 20px;
@@ -396,6 +549,7 @@ a {
   text-decoration: none;
   color: var(--b-white);
   background-color: var(--blue-light);
+  width: 55px;
 }
 
 .pagination-link-current {
