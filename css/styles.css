@@ -221,7 +221,7 @@ a {
 .navigation-list {
   margin: 0;
   padding: 0;
-  width: 340px;
+  width: 310px;
 }
 
 .menu {
@@ -231,7 +231,7 @@ a {
 }
 
 .navigation-item {
-  padding-top: 20px;
+  padding-top: 19px;
   padding-bottom: 20px;
 }
 
@@ -244,23 +244,23 @@ a {
   display: block;
 }
 
+.navigation-user {
+  width: 250px;
+}
+
 .navigation-user .navigation-link {
   min-height: 18px;
   min-width: 18px;
 }
 
 .navigation-user .button {
-  min-width: 160px;
-  min-height: 37px;
+
 }
 
 .logo {
   margin-right: auto;
   margin-left: auto;
-}
-
-.navigation-user {
-  width: 250px;
+  transform: translateX(-15px);
 }
 
 /* ==================================
@@ -285,6 +285,11 @@ a {
    Section - Advantages
    ================================= */
 
+.advantages-header {
+  padding-top: 63px;
+  padding-bottom: 79px;
+}
+
 .advantages,
 .advantages-row {
   text-align: center;
@@ -296,14 +301,12 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--b-black);
-  margin-top: 63px;
-  margin-bottom: 23px;
+  margin-bottom: 32px;
 }
 
 .advantages-description {
   font-size: 22px;
   line-height: 36px;
-  margin-bottom: 73px;
 }
 
 .advantages-grid {
@@ -313,7 +316,6 @@ a {
 
 .advantages-item-img-r {
   grid-column: 2 / 4;
-  grid-row: 1 / 2;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -341,10 +343,10 @@ a {
   text-transform: uppercase;
   color: var(--b-white);
   margin: 0;
+  margin-bottom: 25px;
 }
 
 .advantages-item-number {
-  margin-top: 25px;
   margin-bottom: 25px;
 }
 
@@ -353,18 +355,21 @@ a {
 }
 
 .advantages-list-item {
-  padding: 89px 75px 79px 95px;
+  padding: 98px 75px 77px 95px;
+}
+
+.advantages-item-img {
+  margin-bottom: 23px;
 }
 
 .advantages-item-heading {
   line-height: 28px;
   text-transform: uppercase;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
 }
 
 .advantages-number {
-  margin-bottom: 26px;
+  margin-bottom: 35px;
 }
 
 .advantages-item-lighterblue {
@@ -375,24 +380,25 @@ a {
    Section - Booking
    ================================= */
 
+.booking-container {
+  padding-top: 91px;
+  padding-bottom: 70px;
+}
+
 .booking-title {
   line-height: 36px;
-  margin-top: 91px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 .booking-button {
   font-size: 20px;
   line-height: 36px;
-  margin-bottom: 91px;
-  min-width: 575px;
-  min-height: 60px;
 }
 
 .booking-text {
   font-size: 22px;
   line-height: 26px;
-  margin-bottom: 70px;
+  margin-bottom: 62px;
 }
 
 /* ==================================
@@ -403,32 +409,30 @@ a {
   background: var(--blue-dark) url("../img/backgrounds/background-subscribe.jpg") no-repeat center/cover;
   color: var(--b-white);
   text-align: center;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .subscribe-title {
   line-height: 36px;
   color: var(--b-white);
-  padding-top: 94px;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
 }
 
 .subscribe-text {
   font-size: 22px;
   line-height: 26px;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 
 .subscribe-button {
   font-size: 20px;
   line-height: 26px;
-  min-width: 200px;
-  min-height: 60px;
 }
 
 .subscribe-form {
   width: 800px;
   margin: 0 auto;
-  padding-bottom: 94px;
 }
 
 /* ==================================
@@ -475,10 +479,14 @@ a {
   color: var(--b-white);
 }
 
+.inner-header-container {
+  padding-top: 35px;
+  padding-bottom: 83px;
+}
+
 .inner-header-title {
   color: var(--b-white);
-  padding-top: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs {
@@ -499,10 +507,6 @@ a {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-}
-
-.filter {
-  padding-bottom: 83px;
 }
 
 .filters {
@@ -545,6 +549,9 @@ a {
    Section - Sorting
    ================================= */
 
+.catalog-result {
+  border-bottom: 1px solid #E5E5E5;
+}
 
 .catalog-sort {
   display: flex;
@@ -581,18 +588,14 @@ a {
 .card {
   display: grid;
   grid-template-columns:  180px 320px auto;
-  gap: 36px;
+  column-gap: 36px;
   padding-top: 30px;
   padding-bottom: 30px;
+  border-top: 1px solid #E5E5E5;
 }
 
-.card-link {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.content-column {
-  grid-column: 2 / 3;;
+.card:last-child {
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .card-name-link {
@@ -601,34 +604,38 @@ a {
 }
 
 .card-category {
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
 .card-type {
-  margin-right: 78px;
+
 }
 
 .card-buttons {
-  display: flex;
-  width: 319px;
+  display: grid;
+  grid-template-columns: 151px 160px;
+  column-gap: 8px;
+}
+
+.card-buttons .button {
+  display: block;
 }
 
 .raiting-column {
-  grid-column: 3 / 4;
-  display: flex;
-  flex-direction: column;
   justify-self: end;
 }
 
 .raiting {
   display: flex;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  margin-bottom: 61px;
 }
 
-.raiting-item:not(last-item) {
-  margin-right: 7px;
+.raiting-item {
+  width: 25px;
 }
 
 .raiting-value {
@@ -645,18 +652,20 @@ a {
 
 }
 
+.catalog-more {
+  padding-top: 31px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
 .catalog-button-more {
   font-size: 20px;
   line-height: 26px;
   min-width: 625px;
   min-height: 55px;
-  margin-top: 31px;
-  margin-bottom: 30px;
 }
 
-.catalog-more {
-  text-align: center;
-}
+
 
 /* ==================================
    Section - Pagination
@@ -704,11 +713,12 @@ a {
 
 .subscribe-catalog {
   text-align: center;
+  padding-top: 94px;
+  padding-bottom: 138px;
 }
 
 .subscribe-catalog-title {
   line-height: 36px;
   color: var(--b-black);
-  padding-top: 94px;
   margin-bottom: 20px;
 }
