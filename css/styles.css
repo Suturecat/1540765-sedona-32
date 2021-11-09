@@ -1482,17 +1482,21 @@ a {
 .modal {
   position: relative;
   margin: auto;
-  padding: 68px;
+  padding: 61px 68px 68px 68px;
   width: 715px;
   background-color: var(--b-white);
   border-radius: 30px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
 }
 
+.modal-none {
+  display: none;
+}
+
 .modal-close-button {
   position: absolute;
-  top: 65px;
-  right: 65px;
+  top: 56px;
+  right: 70px;
   width: 53px;
   height: 53px;
   border-radius: 50%;
@@ -1508,8 +1512,26 @@ a {
   fill: var(--b-black);
 }
 
+.modal-close-button:hover {
+  background-color: var(--b-grey);
+}
+
+.modal-close-button:focus {
+  background-color: var(--b-grey);
+  outline: 3px solid var(--blue-light);
+}
+
+.modal-close-button:active,{
+  background-color: rgba(230, 230, 230, 0.6);
+  outline: none;
+}
+
+.modal-close-button:active path {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
 .modal-title {
-  margin-bottom: 70px;
+  margin-bottom: 62px;
   text-transform: uppercase;
   font-family: var(--base-fw);
   font-weight: 700px;
@@ -1518,20 +1540,35 @@ a {
   color: var(--b-black);
 }
 
+.rent-form {
+  display: grid;
+  grid-template-columns: 288px 230px;
+  column-gap: 56px;
+  row-gap: 40px;
+}
+
+.check-in-data {
+  grid-column: 1 / 3;
+}
+
+.check-out-data {
+  grid-column: 1 / 3;
+}
+
+.adults-data {
+  grid-column: 1 / 2;
+}
+
+.rent-form-button {
+ grid-column: 1 / 3;
+}
+
 .field-group {
   position: relative;
   margin: 0;
-  margin-bottom: 40px;
-  display: flex;
-  margin: 0;
-  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.visitors {
-  display: flex;
 }
 
 .rent-form-label {
@@ -1553,7 +1590,7 @@ a {
   color: rgba(0, 0, 0, 0.6);
   background-image: url(/img/icons/calendar.svg);
   background-repeat: no-repeat;
-  background-position:center right 20px;
+  background-position:center right 17px;
 }
 
 .check-in-data::after {
@@ -1578,7 +1615,141 @@ a {
   line-height: 40px;
 }
 
-.visitors {
+.amount-button {
+  position: relative;
+  width: 44px;
+  border: 0;
+  background-color: transparent;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
 }
+
+.amount-change-button {
+  max-width: 133px;
+  display: flex;
+  background-color: var(--b-grey-light);
+  border-radius: 4px;
+  padding: 5px 0 5px 0;
+}
+
+.amount-change-button path {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.minus-button:hover path {
+  fill: var(--b-black);
+}
+
+.minus-button:focus {
+  fill: var(--b-black);
+  outline: 3px solid var(--blue-light);
+}
+
+.minus-button:active path {
+  fill: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.plus-button:hover path {
+  fill: var(--b-black);
+}
+
+.plus-button:focus {
+  fill: var(--b-black);
+  outline: 3px solid var(--blue-light);
+}
+
+.plus-button:active path {
+  fill: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.people-number {
+  max-width: 44px;
+  padding: 0 16px 0 16px;
+  margin: 0;
+  border: none;
+  font-family: var(--base-ff);
+  font-weight: 700;
+  font-size: var(--base-fz);
+  line-height: 40px;
+  background-color: transparent;
+}
+
+.people-number::-webkit-outer-spin-button,
+.people-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.rent-form-button {
+  font-size: 20px;
+  line-height: 40px;
+  border-radius: 10px;
+  padding: 10px 0px;
+  margin: 0;
+}
+
+/* ==================================
+   Tooltip
+   ================================= */
+
+.form-label-ico {
+  position: relative;
+  padding-right: 6px;
+}
+
+.info {
+  position: absolute;
+  left: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--blue-light);
+  background-image: url(/img/icons/info.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1px;
+  cursor: pointer;
+}
+
+.info:active {
+  background-color: var(--blue-dark);
+}
+
+.tooltip {
+  position: absolute;
+  top: 53px;
+  right: 32px;
+  width: 256px;
+  height: 143px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  background-color: var(--b-black);
+  border-radius: 10px;
+  padding: 19px 18px 20px 22px;
+}
+
+.tooltip-text {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: var(--base-fw);
+  color: var(--b-white);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 50%;
+  top: -11px;
+  background-color: var(--b-black);
+  transform: rotate(45deg) translateX(50%);
+}
+
