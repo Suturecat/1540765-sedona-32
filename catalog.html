@@ -13,26 +13,25 @@
     <header class="main-header">
       <nav class="navigation container-xl">
         <ul class="navigation-list rs-list">
-          <li class="navigation-item">
-            <a class="navigation-link text-focus" href="index.html">Главная</a>
+          <li class="navigation-item nav-text">
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link text-focus" href="#">О Седоне</a>
+          <li class="navigation-item nav-text">
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item nav-text">
             <a class="navigation-link navigation-link-active">Гостиницы</a>
           </li>
         </ul>
         <div class="navigation-logo">
-          <a class="logo">
+          <a class="logo" href="index.html">
             <span class="visually-hidden">Логотип города Седона</span>
             <img src="img/logos/logo-sedona.svg" width="138px" height="70px" class="logo" alt="Логотип города Седона">
           </a>
         </div>
-
-        <ul class="navigation-list navigation-user menu rs-list">
-          <li class="navigation-item">
-            <a class="navigation-link icon-focus" href="#">
+        <ul class="navigation-list navigation-user rs-list">
+          <li class="navigation-item nav-ico ">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
               <svg class="navigation-ico" width="18" height="18" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -41,8 +40,8 @@
               </svg>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-fav icon-focus" href="#">
+          <li class="navigation-item nav-ico ">
+            <a class="navigation-link navigation-fav" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="navigation-fav-count">12</span>
               <svg class="navigation-ico" width="18" height="17" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +50,37 @@
                   fill="none" />
               </svg>
             </a>
+            <div class="popup-fav popup-is-open">
+              <ul class="fav-item-list rs-list">
+                <li class="fav-item">
+                  <a href="#" class="fav-item-content">
+                    <div class="popup-img">
+                      <img class="fav-item-img" src="img/products/desert-quail-small.png" alt="Desert Quail Inn" width="48" height="48">
+                    </div>
+                    <span class="fav-item-title rs-list">Desert Quail Inn</span>
+                    <span class="fav-item-category rs-list">Мотель</span>
+                  </a>
+                  <button class="fav-item-cart-button">
+                    <svg class="fav-item-ico" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3 2.3H.6c-.3 0-.6.2-.6.5s.3.6.6.6h1.7v12c0 .3.3.6.6.6h10.2c.3 0 .6-.3.6-.6v-12h1.7c.3 0 .6-.3.6-.6s-.4-.5-.7-.5Zm-2.8 12.5H3.4V3.4h9.1v11.4ZM6.2 1.2h3.4c.3 0 .6-.3.6-.6S10 0 9.7 0H6.2c-.3 0-.5.3-.5.6s.2.6.5.6Z" fill="none"/><path d="M6.2 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.3-.6.6v5.7c.1.3.3.6.6.6ZM9.7 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.4-.6.6v5.7c0 .3.2.6.6.6Z" fill="none"/></svg>
+                    <span class="visually-hidden">Удалить из избранного</span>
+                  </button>
+                </li>
+                <li class="fav-item">
+                  <a class="fav-item-content" href="#">
+                    <div class="popup-img">
+                      <img class="fav-item-img" src="img/products/villas-at-poco-diablo-small.png" alt="Villas at Poco Diablo" width="48" height="48">
+                    </div>
+                    <span class="fav-item-title rs-list">Villas at Poco Diablo</span>
+                    <span class="fav-item-category rs-list">Апартаменты</span>
+                  </a>
+                  <button class="fav-item-cart-button">
+                    <svg class="fav-item-ico" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3 2.3H.6c-.3 0-.6.2-.6.5s.3.6.6.6h1.7v12c0 .3.3.6.6.6h10.2c.3 0 .6-.3.6-.6v-12h1.7c.3 0 .6-.3.6-.6s-.4-.5-.7-.5Zm-2.8 12.5H3.4V3.4h9.1v11.4ZM6.2 1.2h3.4c.3 0 .6-.3.6-.6S10 0 9.7 0H6.2c-.3 0-.5.3-.5.6s.2.6.5.6Z" fill="none"/><path d="M6.2 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.3-.6.6v5.7c.1.3.3.6.6.6ZM9.7 12c.3 0 .6-.3.6-.6V5.7c0-.3-.3-.6-.6-.6s-.6.4-.6.6v5.7c0 .3.2.6.6.6Z" fill="none"/></svg>
+                    <span class="visually-hidden">Удалить из избранного</span>
+                  </button>
+                </li>
+              </ul>
+              <a class="popup-button button button-brown" href="">Все избранные</a>
+            </div>
           </li>
           <li class="navigation-item">
             <a href="#" class="button button-brown">Хочу сюда!</a>
@@ -107,21 +137,21 @@
                 <ul class="filter-list rs-list">
                   <li class="filter-item">
                     <label class="control">
-                      <input class="control-input visually-hidden" type="radio" name="hotel" value="hotel" checked>
+                      <input class="control-input visually-hidden" type="radio" name="housing-type" value="hotel" checked>
                       <span class="control-mark"></span>
                       <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="filter-item">
                     <label class="control">
-                      <input class="control-input visually-hidden" type="radio" name="motel" value="motel">
+                      <input class="control-input visually-hidden" type="radio" name="housing-type" value="motel">
                       <span class="control-mark"></span>
                       <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li class="filter-item">
                     <label class="control">
-                      <input class="control-input visually-hidden" type="radio" name="apartment" value="apartment">
+                      <input class="control-input visually-hidden" type="radio" name="housing-type" value="apartment">
                       <span class="control-mark"></span>
                       <span class="control-label">Аппартаменты</span>
                     </label>
@@ -440,6 +470,70 @@
         </a>
       </section>
       </footer>
+      <div class="overlay is-open">
+        <section class="modal">
+          <div class="modal-header">
+            <h2 class="modal-title rs-list">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close">
+              <img class="cross-ico" src="/img/icons/cross.svg" width="13" height="13">
+              <span class="visually-hidden">Закрыть модальное окно</span>
+            </button>
+          </div>
+          <form action="https://echo.htmlacademy.ru/" class="rent-form" method="POST">
+            <div class="field-group">
+              <label for="check-in-date" class="rent-form-label">Дата заезда:</label>
+              <div class="form-side">
+                <input type="text" class="rent-form-field field rent-form-error" id="check-in-date" name="check-in-date"  placeholder="Укажите дату">
+                <p class="error rs-list">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="check-out-date" class="rent-form-label">Дата выезда:</label>
+              <div class="form-side">
+                <input type="text" class="rent-form-field field rent-form-error" id="check-out-date" name="check-out-date"  placeholder="Укажите дату">
+                <p class="alert rs-list">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+            </div>
+            <div class="field-group">
+              <div class="form-column-left">
+                <label for="adults" class="rent-form-label">Взрослые:</label>
+                <div class="amount-change-button">
+                  <button class="amount-button minus-button" type="button">
+                    <img src="/img/icons/minus.svg" class="minus-ico" width="13" height="1"></img>
+                    <span class="visually-hidden">Минус один взрослый</span>
+                  </button>
+                  <input type="number" class="people-number" id="adults" name="adults-number" value="2">
+                  <button class="amount-button plus-button" type="button">
+                    <img src="/img/icons/plus.svg" class="plus-ico" width="13" height="13"></img>
+                    <span class="visually-hidden">Плюс один взрослый</span>
+                  </button>
+                </div>
+              </div>
+              <div class="form-column-right">
+                <label for="childrens" class="rent-form-label">Дети:</label>
+                <button class="info" type="button">
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+                <div class="tooltip">
+                  <p class="tooltip-text rs-list">Укажите количество детей, которые будут с&nbsp;вами, возраст которых от&nbsp;6&nbsp;до&nbsp;18&nbsp;лет. Дети до&nbsp;6&nbsp;лет размещаются бесплатно.</p>
+                </div>
+                <div class="amount-change-button children-button">
+                  <button class="amount-button minus-button" type="button">
+                    <img src="/img/icons/minus.svg" class="minus-ico" width="13" height="1"></img>
+                    <span class="visually-hidden">Минус один ребенок</span>
+                  </button>
+                  <input type="number" class="people-number" id="children" name="сhild-number" value="1">
+                  <button class="amount-button plus-button" type="button">
+                    <img src="/img/icons/plus.svg" class="plus-ico" width="13" height="13"></img>
+                    <span class="visually-hidden">Плюс один ребенок</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="rent-form-button button-blue button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
       <!-- FOOTER-END -->
   </div>
 </body>

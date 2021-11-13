@@ -19,10 +19,8 @@
 
 /* ==================================
      Section - Variables
-     Блок будет содержать переменные:
-     - цвета
-     - повторяющиеся размеры и т.д.
      ================================= */
+
 :root {
   --b-black: #000000;
   --b-dark: #333333;
@@ -291,7 +289,7 @@ a {
 
 .navigation {
   display: grid;
-  grid-template-columns: 310px 1fr 310px;
+  grid-template-columns: 308px 1fr 310px;
   position: relative;
   min-height: inherit;
 }
@@ -311,50 +309,41 @@ a {
   font-weight: 700;
   display: block;
   outline: none;
-  border-radius: 10px;
+}
+
+.nav-text {
+  padding-bottom: 3px;
+}
+
+.nav-ico {
+  padding-top: 3px;
 }
 
 .navigation-link {
   position: relative;
 }
 
-.text-focus::before {
-  position: absolute;
-  content: "";
-  width: 110%;
-  height: 110%;
-  top: 5%;
-  right: 0;
-  bottom: 0;
-  left: -5%;
-  outline: 3px solid var(--blue-light);
-  border-radius: 4px;
-  opacity: 0;
-  z-index: 1;
-}
-
-.text-focus:focus::before {
-  opacity: 1;
-}
-
-.navigation-item {
-  padding: 20px 00 19px;
-}
-
 .navigation-link-active::after {
   position: absolute;
   content: "";
-  bottom: -20px;
+  bottom: -22px;
   left: 0;
   width: 100%;
   height: 2px;
   background-color: var(--brown-light);
+  z-index: 1;
 }
 
 .navigation-link:hover,
 .navigation-link:hover path {
   color: var(--brown-dark);
   fill: var(--brown-dark);
+}
+
+.navigation-link:focus {
+  outline: 3px solid var(--blue-light);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .navigation-link:active {
@@ -368,8 +357,9 @@ a {
 
 .navigation-fav {
   position: relative;
-  left: -6px;
+  margin-right: 12px;
 }
+
 .navigation-fav-count {
   position: absolute;
   width: 19px;
@@ -409,25 +399,6 @@ a {
   z-index: 1;
 }
 
-.icon-focus:before {
-  position: absolute;
-  content: "";
-  width: 140%;
-  height: 110%;
-  top: -10%;
-  right: 0;
-  bottom: 0;
-  left: -20%;
-  outline: 3px solid var(--blue-light);
-  border-radius: 4px;
-  opacity: 0;
-  z-index: 1;
-}
-
-.icon-focus:focus::before {
-  opacity: 1;
-}
-
 /* ==================================
    Section - Intro
    ================================= */
@@ -440,7 +411,7 @@ a {
   align-items: center;
   text-align: center;
   padding-top: 51px;
-  padding-bottom: 83px;
+  padding-bottom: 82px;
   position: relative;
 }
 
@@ -459,8 +430,8 @@ a {
    ================================= */
 
 .advantages-header {
-  padding-top: 63px;
-  padding-bottom: 79px;
+  padding-top: 61px;
+  padding-bottom: 81px;
 }
 
 .advantages,
@@ -497,7 +468,7 @@ a {
 .advantages-item-coldblue {
   background-color: var(--blue-light);
   color: var(--b-white);
-  padding: 98px 95px 90px 95px;
+  padding: 98px 95px 88px 95px;
 }
 
 .advantages-row {
@@ -516,11 +487,11 @@ a {
   text-transform: uppercase;
   color: var(--b-white);
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .advantages-item-number {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .advantages-item-lightblue {
@@ -528,7 +499,7 @@ a {
 }
 
 .advantages-list-item {
-  padding: 98px 75px 100px 75px;
+  padding: 98px 75px 69px 75px;
 }
 
 .advantages-item-img {
@@ -554,14 +525,14 @@ a {
    ================================= */
 
 .booking {
-  padding-top: 91px;
-  padding-bottom: 88px;
+  padding-top: 89px;
+  padding-bottom: 91px;
   text-align: center;
 }
 
 .booking-title {
   line-height: 36px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .booking-button {
@@ -586,7 +557,7 @@ a {
     url("../img/backgrounds/background-subscribe.jpg") no-repeat center/cover;
   color: var(--b-white);
   text-align: center;
-  padding-top: 94px;
+  padding-top: 92px;
   padding-bottom: 94px;
   display: grid;
   grid-template-columns: auto 800px auto;
@@ -599,7 +570,7 @@ a {
 .subscribe-title {
   line-height: 36px;
   color: var(--b-white);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .subscribe-text {
@@ -653,7 +624,7 @@ a {
 }
 
 .social {
-  width: 111px;
+  width: 107px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -662,18 +633,15 @@ a {
 
 .social-link {
   border-radius: 5px;
-  min-height: 34px;
-  min-width: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social-link:hover {
-}
-
 .social-link:focus {
   outline: 3px solid var(--blue-light);
+  outline-offset: 7px;
+  border-radius: 1px;
 }
 
 .footer-ico path {
@@ -696,6 +664,7 @@ a {
   color: var(--b-black);
   text-decoration: none;
   border-radius: 1px;
+  margin-left: 9px;
 }
 
 .footer-phone:hover {
@@ -713,6 +682,7 @@ a {
 
 .footer-logo {
   border-radius: 1px;
+  padding-top: 5px;
 }
 
 .footer-logo:hover path {
@@ -823,6 +793,7 @@ a {
   position: relative;
   display: block;
   padding-left: 38px;
+  cursor: pointer;
 }
 
 .filter-list .control:not(last-child) {
@@ -1336,11 +1307,11 @@ a {
    Popup
    ================================= */
 
-.popup-fav {
+/* .popup-is-open {
   display: none;
-}
+} */
 
-.popup {
+.popup-fav {
   position: absolute;
   z-index: 2;
   top: 61px;
@@ -1353,10 +1324,10 @@ a {
   line-height: 40px;
   background-color: var(--b-white);
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
+  border-radius: 22px;
 }
 
-.popup::after {
+.popup-fav::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -1369,8 +1340,8 @@ a {
   transform: rotate(45deg) translateX(50%);
 }
 
-.popup-content {
-  padding: 25px 17px 25px 25px;
+.fav-item-list {
+  padding: 24px 17px 25px 25px;
   border-top: 1px solid var(--b-grey);
   border-left: 1px solid var(--b-grey);
   border-right: 1px solid var(--b-grey);
@@ -1390,7 +1361,6 @@ a {
   display: grid;
   grid-template-columns: 48px auto;
   column-gap: 17px;
-  row-gap: 2px;
   border-radius: 3px;
 }
 
@@ -1398,8 +1368,10 @@ a {
   margin-bottom: 25px;
 }
 
-.fav-item-img {
+.popup-img {
   grid-row: 1 / 3;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .fav-item-cart-button {
@@ -1425,7 +1397,8 @@ a {
   outline: none;
 }
 
-.fav-item-title{
+.fav-item-title {
+  margin-top: 4px;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
@@ -1435,6 +1408,7 @@ a {
 .fav-item-category {
   line-height: 16px;
   color: var(--b-black);
+  margin-bottom: 5px;
 }
 
 .popup-button {
@@ -1465,38 +1439,52 @@ a {
 
 
 /* ==================================
-   Popup
+   Modal
    ================================= */
 
-.modal-container {
+.overlay {
   position: fixed;
   display: flex;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  z-index: 2;
+  z-index: 99;
+}
+
+.is-open {
+  display: none;
 }
 
 .modal {
-  position: relative;
   margin: auto;
-  padding: 61px 68px 68px 68px;
+  padding: 54px 70px 69px 70px;
   width: 715px;
   background-color: var(--b-white);
   border-radius: 30px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
 }
 
-.modal-none {
-  display: none;
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
 }
 
-.modal-close-button {
-  position: absolute;
-  top: 56px;
-  right: 70px;
+.modal-title {
+  text-transform: uppercase;
+  font-family: var(--base-fw);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--b-black);
+}
+
+.modal-close {
   width: 53px;
   height: 53px;
   border-radius: 50%;
@@ -1506,66 +1494,35 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-left: 10px;
+  margin-top: 1px;
+  flex-shrink: 0;
 }
 
-.modal-close-button path {
-  fill: var(--b-black);
-}
-
-.modal-close-button:hover {
+.modal-close:hover {
   background-color: var(--b-grey);
 }
 
-.modal-close-button:focus {
+.modal-close:focus {
   background-color: var(--b-grey);
   outline: 3px solid var(--blue-light);
 }
 
-.modal-close-button:active,{
+.modal-close:active {
   background-color: rgba(230, 230, 230, 0.6);
   outline: none;
 }
 
-.modal-close-button:active path {
-  fill: rgba(0, 0, 0, 0.3);
-}
-
-.modal-title {
-  margin-bottom: 62px;
-  text-transform: uppercase;
-  font-family: var(--base-fw);
-  font-weight: 700px;
-  font-size: 30px;
-  line-height: 40px;
-  color: var(--b-black);
+.modal-close:active .cross-ico {
+  opacity: 0.3;
 }
 
 .rent-form {
   display: grid;
-  grid-template-columns: 288px 230px;
-  column-gap: 56px;
   row-gap: 40px;
 }
 
-.check-in-data {
-  grid-column: 1 / 3;
-}
-
-.check-out-data {
-  grid-column: 1 / 3;
-}
-
-.adults-data {
-  grid-column: 1 / 2;
-}
-
-.rent-form-button {
- grid-column: 1 / 3;
-}
-
 .field-group {
-  position: relative;
-  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1576,12 +1533,13 @@ a {
   font-weight: 700;
   font-size: var(--base-fz);
   line-height: 40px;
+  margin-right: 10px;
 }
 
 .rent-form-field {
   width: 420px;
-  height: 50px;
-  padding: 0 18px;
+  padding: 5px 19px;
+  padding-right: 40px;
   font-family: var(--base-ff);
   font-weight: 700;
   font-size: var(--base-fz);
@@ -1590,34 +1548,49 @@ a {
   color: rgba(0, 0, 0, 0.6);
   background-image: url(/img/icons/calendar.svg);
   background-repeat: no-repeat;
-  background-position:center right 17px;
+  background-position:center right 19px;
+  flex-shrink: 0;
 }
 
-.check-in-data::after {
-  content: "Мы не можем отправить вас в прошлое.";
+.form-side {
+  position: relative;
+}
+
+.error {
   position: absolute;
-  top: 41px;
-  right: 140px;
   color: var(--error);
   font-family: var(--base-ff);
   font-size: 16px;
   line-height: 40px;
+  top: 43px;
 }
 
-.check-out-data::after {
-  content: "На эти даты есть свободные номера. Пока есть.";
+.alert {
   position: absolute;
-  top: 41px;
-  right: 89px;
   color: var(--b-dark);
   font-family: var(--base-ff);
   font-size: 16px;
   line-height: 40px;
+  top: 43px;
+}
+
+.form-column-left {
+  width: 289px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-column-right {
+  position: relative;
+  width: 230px;
+  display: flex;
+  align-items: center;
 }
 
 .amount-button {
-  position: relative;
-  width: 44px;
+  width: 50px;
+  height: 50px;
   border: 0;
   background-color: transparent;
   display: flex;
@@ -1632,38 +1605,32 @@ a {
   display: flex;
   background-color: var(--b-grey-light);
   border-radius: 4px;
-  padding: 5px 0 5px 0;
+  flex-shrink: 0;
 }
 
-.amount-change-button path {
-  fill: rgba(0, 0, 0, 0.3);
+.children-button {
+  margin-left: auto;
 }
 
-.minus-button:hover path {
-  fill: var(--b-black);
+.minus-button,
+.plus-button {
+  opacity: 0.3;
 }
 
-.minus-button:focus {
-  fill: var(--b-black);
-  outline: 3px solid var(--blue-light);
+.minus-button:hover,
+.plus-button:hover {
+  opacity: 1;
 }
 
-.minus-button:active path {
-  fill: rgba(0, 0, 0, 0.2);
-  outline: none;
-}
-
-.plus-button:hover path {
-  fill: var(--b-black);
-}
-
+.minus-button:focus,
 .plus-button:focus {
-  fill: var(--b-black);
   outline: 3px solid var(--blue-light);
+  opacity: 1;
 }
 
-.plus-button:active path {
-  fill: rgba(0, 0, 0, 0.2);
+.minus-button:active,
+.plus-button:active {
+  opacity: 0.2;
   outline: none;
 }
 
@@ -1679,9 +1646,13 @@ a {
   background-color: transparent;
 }
 
+.people-number[type='number'] {
+  -moz-appearance:textfield;
+}
+
 .people-number::-webkit-outer-spin-button,
 .people-number::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -1703,10 +1674,6 @@ a {
 }
 
 .info {
-  position: absolute;
-  left: 56px;
-  top: 50%;
-  transform: translateY(-50%);
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -1717,6 +1684,8 @@ a {
   background-repeat: no-repeat;
   background-size: 1px;
   cursor: pointer;
+  margin-right: 5px;
+  flex-shrink: 0;
 }
 
 .info:active {
@@ -1725,8 +1694,8 @@ a {
 
 .tooltip {
   position: absolute;
-  top: 53px;
-  right: 32px;
+  top: 54px;
+  right: 36px;
   width: 256px;
   height: 143px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
