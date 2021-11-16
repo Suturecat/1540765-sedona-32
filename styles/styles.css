@@ -852,21 +852,21 @@ a {
   background-color: var(--b-white);
 }
 
-input[type="checkbox"]:hover + .control-mark {
+.control-checkbox:hover + .control-mark {
   background-color: var(--white-lighten-2);
 }
 
-input[type="checkbox"]:focus + .control-mark {
+.control-checkbox:focus + .control-mark {
   background-color: var(--white-lighten-2);
   outline: 3px solid var(--blue-light);
 }
 
-input[type="checkbox"]:active + .control-mark {
+.control-checkbox:active + .control-mark {
   background-color: var(--white-lighten-1);
   outline: none;
 }
 
-input[type="checkbox"]:checked + .control-mark::before {
+.control-checkbox:checked + .control-mark::before {
   position: absolute;
   content: "";
   top: 9px;
@@ -877,7 +877,7 @@ input[type="checkbox"]:checked + .control-mark::before {
   transform: rotate(-45deg);
 }
 
-input[type="checkbox"]:checked + .control-mark::after {
+.control-checkbox:checked + .control-mark::after {
   position: absolute;
   content: "";
   top: 10px;
@@ -888,15 +888,15 @@ input[type="checkbox"]:checked + .control-mark::after {
   transform: rotate(45deg);
 }
 
-input[type="radio"] + .control-mark {
+.control-radio + .control-mark {
   border-radius: 50%;
 }
 
-input[type="radio"]:focus + .control-mark {
+.control-radio:focus + .control-mark {
   box-shadow: inset 0 0 0 3px var(--blue-light);
 }
 
-input[type="radio"]:checked + .control-mark::before {
+.control-radio:checked + .control-mark::before {
   position: absolute;
   content: "";
   width: 10px;
@@ -1609,7 +1609,7 @@ input[type="radio"]:checked + .control-mark::before {
   line-height: 40px;
   border-radius: 4px;
   color: var(--black-lighten-3);
-  background-image: url("/img/icons/calendar.svg");
+  background-image: url("../img/icons/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 19px;
   flex-shrink: 0;
@@ -1756,7 +1756,7 @@ input[type="radio"]:checked + .control-mark::before {
   border-radius: 50%;
   border: none;
   background-color: var(--blue-light);
-  background-image: url("/img/icons/info.svg");
+  background-image: url("../img/icons/info.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1px;
